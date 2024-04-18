@@ -1,20 +1,62 @@
-.App {
-  text-align: center;
+#root {
+background-color: #b3dfeb;
+padding: 10px;
+}
+.container {
+
+  margin-top: 10px; /* Felül 10 pixel margó */
+  margin-right: 10px; /* Jobb oldalon 10 pixel margó */
+  margin-bottom: 10px; /* Alul 10 pixel margó */
+  margin-left: 10px; /* Bal oldalon 10 pixel margó */
 }
 
+.container p {
+  font-size: larger;
+}
+.App {
+  text-align: center;
+
+}
+#lastt {
+  padding-bottom: 22px;
+}
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
+.text-center img {
+  padding-top: 10px;
+  max-height: 300px;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+
+#fix {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+#mission {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-style: italic;
+  font-size: large;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+.mb-0 {
+  margin-top: 5px; /* Hozzáadott margó felül */
+}
+
 .App-header {
-  background-color: #282c34;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,7 +65,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
