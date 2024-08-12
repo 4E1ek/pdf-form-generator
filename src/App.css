@@ -1,47 +1,56 @@
 #root {
 background-color: #b3dfeb;
-padding: 10px;
+padding: 1px;
 }
 .container {
 
-  margin-top: 10px; /* Felül 10 pixel margó */
-  margin-right: 10px; /* Jobb oldalon 10 pixel margó */
-  margin-bottom: 10px; /* Alul 10 pixel margó */
-  margin-left: 10px; /* Bal oldalon 10 pixel margó */
+  margin-top: 1px; /* Felül 10 pixel margó */
+  margin-right: 5px; /* Jobb oldalon 10 pixel margó */
+  margin-bottom: 1px; /* Alul 10 pixel margó */
+  margin-left: 5px; /* Bal oldalon 10 pixel margó */
 }
 
 .container p {
-  font-size: larger;
+  font-size: 18px;
+  font-weight: 600;
+}
+.container input {
+  font-size: 20px;
+  font-weight: 600;
+  
 }
 .App {
   text-align: center;
 
 }
 #lastt {
-  padding-bottom: 22px;
+  padding-bottom: 1px;
 }
+
 .App-logo {
   height: 30vmin;
   pointer-events: none;
 }
 
 .text-center img {
-  padding-top: 10px;
-  max-height: 300px;
+  max-height: 110px;
   margin: 0px;
   padding: 0px;
   
 }
-
+#lastt .only {
+  font-size: 16px;
+  padding-bottom: 1px;
+  text-decoration: underline;
+}
 
 #fix {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   border-bottom: 2px solid black;
 }
 #mission {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   font-style: italic;
   font-size: large;
 }
@@ -52,7 +61,7 @@ padding: 10px;
 }
 
 .mb-0 {
-  margin-top: 5px; /* Hozzáadott margó felül */
+  margin-top: 1px; /* Hozzáadott margó felül */
 }
 
 .App-header {
