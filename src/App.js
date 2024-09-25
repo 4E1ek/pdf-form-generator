@@ -8,6 +8,7 @@ import { Container, Row, Col, Button, Form } from 'react-bootstrap'; // Bootstra
 function App() {
   const containerRef = useRef();
   const [showExtraRows, setShowExtraRows] = useState(false);
+  const [selectedOrganizer, setSelectedOrganizer] = useState(null);
 
   const toggleExtraRows = () => setShowExtraRows(!showExtraRows);
 
@@ -38,6 +39,25 @@ function App() {
     });
   };
 
+  const organizers = [
+    {
+      name: 'Pintér Gabriella',
+      phone: '+36 20 324 84 89',
+      email: 'pgconnect@roadistics.com'
+    },
+    {
+      name: 'Gősi Melinda',
+      phone: '+36 20 380 82 36',
+      email: 'gmconnect@roadistics.com'
+    },
+    
+  ];
+
+  const handleOrganizerChange = (e) => {
+    const selected = organizers.find(org => org.name === e.target.value);
+    setSelectedOrganizer(selected);
+  };
+
   return (
     <Container ref={containerRef} className='container'>
       <Row >       
@@ -55,10 +75,9 @@ function App() {
           <p><strong>Adószám:</strong> 27350872-2-12</p>
         </Col>
         <Col xs={6} sm={6} className='text-left'>
-          <p><strong>Közösségi adószám:</strong> HU27350872</p>
           <p><strong>Ügyvezető:</strong> Bucsics Zoltán</p>
-          <p><strong>Telefonszám:</strong> +36204131238</p>
-          <p><strong>E-mail:</strong> info@roadistics.com</p>
+          <p><strong>E-mail:</strong> infoconnect@roadistics.com</p>
+          <p><strong>Közösségi adószám:</strong> HU27350872</p>
         </Col>  
       </Row>
       
@@ -212,6 +231,35 @@ function App() {
         <Col id='lastt' xs={12} sm={6}>
           <p><strong>Megbízás Kelt:</strong></p>
           <input id='lastt' type="text" className="form-control input-no-border" />
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12} sm={3}>
+          <p><strong>Fuvarszervező:</strong></p>
+          <Form.Select onChange={handleOrganizerChange}>
+            <option value="">Válassz fuvarszervezőt</option>
+            {organizers.map((organizer, index) => (
+              <option key={index} value={organizer.name}>{organizer.name}</option>
+            ))}
+          </Form.Select>
+        </Col>
+        <Col xs={12} sm={3}>
+          <p><strong>Telefonszám:</strong></p>
+          <input
+            type="text"
+            className="form-control input-no-border"
+            value={selectedOrganizer?.phone || ''}
+            readOnly
+          />
+        </Col>
+        <Col xs={12} sm={3}>
+          <p><strong>E-mail:</strong></p>
+          <input
+            type="text"
+            className="form-control input-no-border"
+            value={selectedOrganizer?.email || ''}
+            readOnly
+          />
         </Col>
       </Row>
       <Row >
